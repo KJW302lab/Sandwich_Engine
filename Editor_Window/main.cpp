@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
+#include "CommonInclude.h"
 
 #define MAX_LOADSTRING 100
 
@@ -17,10 +18,10 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
-                     _In_opt_ HINSTANCE hPrevInstance,
-                     _In_ LPWSTR    lpCmdLine,
-                     _In_ int       nCmdShow)
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 핸들
+                     _In_opt_ HINSTANCE hPrevInstance, // 바로앞에 실행된 현재 프로그램의 인스턴스 핸들, 없을경우에는 NULL, 지금은 신경쓰지 않아도 되는 값이다.
+                     _In_ LPWSTR    lpCmdLine, // 명령행으로 입력된 프로그램 인수 (명령 인수)
+                     _In_ int       nCmdShow) // 프로그램이 실행될 형태이며, 보통 모양정보등이 전달된다.
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);

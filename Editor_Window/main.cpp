@@ -43,15 +43,42 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
 
     MSG msg;
 
+    //GetMessage(&msg, nullptr, 0, 0)
+    // 프로세스에서 발생한 메세지를 메세지 큐에서 가져오는 함수
+    // 메세지 큐에 아무것도 없다면? 아무 메세지도 가져오지 않게 된다.
+
+    // PeekMessage : 메세지큐에 메세지 유무에 상관없이 함수가 리턴된다.
+    // 리턴값이 true인 경우 메세지가 있고, false인 경우는 메세지가 없다고 가르쳐준다.
+
+    while (true)
+    {
+	    if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
+	    {
+		    if (msg.message == WM_QUIT)
+                break;
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+	    }
+	    else
+	    {
+		    // 메세지가 없을 경우 여기서 처리
+            // 게임 로직이 들어가면 된다.
+	    }
+    }
+
     // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    /*while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
-    }
+    }*/
 
     return (int) msg.wParam;
 }
@@ -143,6 +170,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+
+    case WM_KEYDOWN:
+        {
+
+        }
+        break;
+
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
@@ -189,6 +223,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Rectangle(hdc, 400, 400, 500, 500);
 
             (HBRUSH)SelectObject(hdc, oldBrush);
+
            
             EndPaint(hWnd, &ps);
         }

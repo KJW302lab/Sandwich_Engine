@@ -3,9 +3,8 @@
 
 #include "framework.h"
 #include "Editor_Window.h"
-#include "CommonInclude.h"
 
-#include "..\\SandwichEngine_SOURCE\\SandApplication.h"
+#include "..//SandwichEngine_SOURCE//SandApplication.h"
 
 // 코드로 참조 추가
 //#pragma comment (lib, "..\\x64\\Debug\\SandwichEngine_Window.lib")

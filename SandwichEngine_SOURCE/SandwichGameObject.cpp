@@ -15,7 +15,7 @@ namespace Sandwich
 
 	void GameObject::Update()
 	{
-		if (Input::GetKey(eKeyCode::A) && Input::GetKey(eKeyCode::B) )
+		if (Input::GetKey(eKeyCode::A))
 		{
 			mX -= 0.01f;
 		}

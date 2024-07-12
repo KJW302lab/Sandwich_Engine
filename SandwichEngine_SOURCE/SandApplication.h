@@ -1,7 +1,7 @@
 #pragma once
-
-struct Test
+class Application
 {
 public:
 	void test();
 };
+

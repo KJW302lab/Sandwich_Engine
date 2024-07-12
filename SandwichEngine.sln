@@ -5,27 +5,53 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{03CD0258-F877-4E63-A970-E174DCCA158A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandwichEngine_Window", "SandwichEngine_Window\SandwichEngine_Window.vcxproj", "{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandwichEngine_SOURCE", "SandwichEngine_SOURCE\SandwichEngine_SOURCE.vcxitems", "{72C50926-1740-4AE1-9717-0CBD3D9E5A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|Any CPU.Build.0 = Debug|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|x64.ActiveCfg = Debug|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|x64.Build.0 = Debug|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|x86.ActiveCfg = Debug|Win32
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Debug|x86.Build.0 = Debug|Win32
+		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|Any CPU.ActiveCfg = Release|x64
+		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|Any CPU.Build.0 = Release|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|x64.ActiveCfg = Release|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|x64.Build.0 = Release|x64
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|x86.ActiveCfg = Release|Win32
 		{03CD0258-F877-4E63-A970-E174DCCA158A}.Release|x86.Build.0 = Release|Win32
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|Any CPU.Build.0 = Debug|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|x64.ActiveCfg = Debug|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|x64.Build.0 = Debug|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Debug|x86.Build.0 = Debug|Win32
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|Any CPU.ActiveCfg = Release|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|Any CPU.Build.0 = Release|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|x64.ActiveCfg = Release|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|x64.Build.0 = Release|x64
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|x86.ActiveCfg = Release|Win32
+		{F6C92621-BB62-4364-B6B7-3DBB6D44DD93}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6346C33B-A88A-4DDF-831C-5C4DF9B0DDB9}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SandwichEngine_SOURCE\SandwichEngine_SOURCE.vcxitems*{72c50926-1740-4ae1-9717-0cbd3d9e5a01}*SharedItemsImports = 9
+		SandwichEngine_SOURCE\SandwichEngine_SOURCE.vcxitems*{f6c92621-bb62-4364-b6b7-3dbb6d44dd93}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

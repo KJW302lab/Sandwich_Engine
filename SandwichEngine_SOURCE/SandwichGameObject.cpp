@@ -1,8 +1,9 @@
-#include "GameObject.h"
+#include "SandwichGameObject.h"
+#include "SandwichInput.h"
 
 namespace Sandwich
 {
-	GameObject::GameObject()
+	GameObject::GameObject() : mX(0.0f), mY(0.0f)
 	{
 
 	}
@@ -14,22 +15,22 @@ namespace Sandwich
 
 	void GameObject::Update()
 	{
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+		if (Input::GetKey(eKeyCode::A) && Input::GetKey(eKeyCode::B) )
 		{
 			mX -= 0.01f;
 		}
 
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		if (Input::GetKey(eKeyCode::D))
 		{
 			mX += 0.01f;
 		}
 
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
+		if (Input::GetKey(eKeyCode::W))
 		{
 			mY -= 0.01f;
 		}
 
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+		if (Input::GetKey(eKeyCode::S))
 		{
 			mY += 0.01f;
 		}

@@ -1,4 +1,5 @@
 #include "SandApplication.h"
+#include "SandwichInput.h"
 
 namespace Sandwich
 {
@@ -6,7 +7,7 @@ namespace Sandwich
 		: mHwnd(nullptr)
 		, mHdc(nullptr)
 	{
-
+		Input::Initialize();
 	}
 
 	Application::~Application()
@@ -18,7 +19,6 @@ namespace Sandwich
 	{
 		mHwnd = hwnd;
 		mHdc = GetDC(hwnd);
-		mPlayer.SetPosition(0.0f, 0.0f);
 	}
 
 	void Application::Run()
@@ -30,6 +30,7 @@ namespace Sandwich
 
 	void Application::Update()
 	{
+		Input::Update();
 		mPlayer.Update();
 	}
 

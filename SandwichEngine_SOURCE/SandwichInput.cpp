@@ -2,7 +2,7 @@
 
 namespace Sandwich
 {
-	std::vector<Input::Key> Input::mKeys = {};
+	std::vector<Input::Key> Input::Keys = {};
 
 	int ASCII[static_cast<UINT>(eKeyCode::End)] = {
 		'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
@@ -14,8 +14,16 @@ namespace Sandwich
 
 	void Input::Initialize()
 	{
-		//mKeys.resize(static_cast<UINT>(eKeyCode::End));
+		createKeys();
+	}
 
+	void Input::Update()
+	{
+		updateKeys();
+	}
+
+	void Input::createKeys()
+	{
 		for (size_t i = 0; i < static_cast<UINT>(eKeyCode::End); ++i)
 		{
 			Key key = {};
@@ -23,27 +31,38 @@ namespace Sandwich
 			key.state = eKeyState::None;
 			key.keyCode = static_cast<eKeyCode>(i);
 
-			mKeys.push_back(key);
+			Keys.push_back(key);
 		}
 	}
 
-	void Input::Update()
+	void Input::updateKeys()
 	{
-		for (size_t i = 0; i < mKeys.size(); ++i)
-		{
-			// 키가 눌렸는지 아닌지
-			if (GetAsyncKeyState(ASCII[i]) & 0x08000)
-			{
-				// 이전 프레임에도 눌려있었다면 Pressed, 아니면 Down
-				mKeys[i].state = mKeys[i].bPressed ? eKeyState::Pressed : eKeyState::Down;
-				mKeys[i].bPressed = true;
-			}
-			else
-			{
-				// 이전 프레임에 눌려있었다면 Up, 아니면 None,
-				mKeys[i].state = mKeys[i].bPressed ? eKeyState::Up : eKeyState::None;
-				mKeys[i].bPressed = false;
-			}
-		}
+		for (Key& key : Keys)
+			updateKey(key);
+	}
+
+	void Input::updateKey(Input::Key& key)
+	{
+		if (isKeyDown(key.keyCode))
+			updateKeyDown(key);
+		else
+			updateKeyUp(key);
+	}
+
+	bool Input::isKeyDown(eKeyCode code)
+	{
+		return GetAsyncKeyState(ASCII[static_cast<UINT>(code)]) & 0x8000;
+	}
+
+	void Input::updateKeyDown(Input::Key& key)
+	{
+		key.state = key.bPressed ? eKeyState::Pressed : eKeyState::Down;
+		key.bPressed = true;
+	}
+
+	void Input::updateKeyUp(Input::Key& key)
+	{
+		key.state = key.bPressed ? eKeyState::Up : eKeyState::None;
+		key.bPressed = false;
 	}
 }

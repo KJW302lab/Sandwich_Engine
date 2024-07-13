@@ -129,6 +129,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="SandwichLoadScene.h" />
+    <ClInclude Include="SandwichPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SandwichPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

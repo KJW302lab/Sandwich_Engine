@@ -18,6 +18,7 @@ namespace Sandwich
 		Z, X, C, V, B, N, M,
 		Left, Right, Down, Up,
 		LButton, RButton,
+		Space,
 		End,
 	};
 

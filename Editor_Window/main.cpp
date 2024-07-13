@@ -5,6 +5,7 @@
 #include "Editor_Window.h"
 
 #include "..//SandwichEngine_SOURCE//SandApplication.h"
+#include "..//SandwichEngine_Window//SandwichLoadScene.h"
 
 // 코드로 참조 추가
 //#pragma comment (lib, "..\\x64\\Debug\\SandwichEngine_Window.lib")
@@ -112,8 +113,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-   const UINT width = 1200;
-   const UINT height = 700;
+   const UINT width = 1600;
+   const UINT height = 900;
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, width, height, 0, nullptr, nullptr, hInstance, nullptr);
@@ -127,6 +128,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+    // load Scenes
+   Sandwich::LoadScenes();
 
    return TRUE;
 }

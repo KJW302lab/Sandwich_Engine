@@ -10,6 +10,7 @@ namespace Sandwich
 		'Z', 'X', 'C', 'V', 'B', 'N', 'M',
 		VK_LEFT, VK_RIGHT, VK_DOWN, VK_UP,
 		MK_LBUTTON, MK_RBUTTON,
+		VK_SPACE,
 	};
 
 	void Input::Initialize()

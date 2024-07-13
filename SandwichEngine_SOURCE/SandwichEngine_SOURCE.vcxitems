@@ -15,15 +15,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SandwichGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SandwichInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SandApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)SandwichTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)SandwichGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)SandwichInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)SandApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)SandwichTime.cpp" />
   </ItemGroup>
 </Project>

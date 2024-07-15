@@ -1,5 +1,5 @@
 #pragma once
-#include "..//SandwichEngine_SOURCE//SandwichScene.h"
+#include "../SandwichEngine_SOURCE/Scene.h"
 
 namespace Sandwich
 {

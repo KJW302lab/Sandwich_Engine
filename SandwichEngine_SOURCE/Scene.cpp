@@ -1,4 +1,4 @@
-#include "SandwichScene.h"
+#include "Scene.h"
 
 namespace Sandwich
 {

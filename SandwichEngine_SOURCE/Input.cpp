@@ -1,4 +1,4 @@
-#include "SandwichInput.h"
+#include "Input.h"
 
 namespace Sandwich
 {

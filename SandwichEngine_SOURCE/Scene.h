@@ -1,6 +1,5 @@
 #pragma once
-#include "SandwichEntity.h"
-#include "SandwichGameObject.h"
+#include "GameObject.h"
 
 namespace Sandwich
 {

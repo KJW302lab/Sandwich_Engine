@@ -1,7 +1,7 @@
 #pragma once
-#include "..//SandwichEngine_SOURCE/SandwichSceneManager.h"
+#include "../SandwichEngine_SOURCE/SceneManager.h"
 
-#include "SandwichPlayScene.h"
+#include "PlayScene.h"
 
 //#ifdef _DEBUG
 //#pragma comment(lib, "..\\x64\\Debug\\SandwichEngine_Window.lib")

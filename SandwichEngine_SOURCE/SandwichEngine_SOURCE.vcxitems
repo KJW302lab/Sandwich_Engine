@@ -15,21 +15,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichEntity.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichGameObject.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichInput.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandApplication.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichScene.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichSceneManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)SandwichTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Component.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Input.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Application.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Scene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Time.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Transform.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichEntity.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichGameObject.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichInput.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandApplication.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichScene.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichSceneManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)SandwichTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Component.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Input.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)SpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Scene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)SceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Transform.cpp" />
   </ItemGroup>
 </Project>

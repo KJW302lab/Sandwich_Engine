@@ -1,7 +1,7 @@
-#include "SandApplication.h"
-#include "SandwichInput.h"
-#include "SandwichTime.h"
-#include "SandwichSceneManager.h"
+#include "Application.h"
+#include "Input.h"
+#include "Time.h"
+#include "SceneManager.h"
 
 namespace Sandwich
 {

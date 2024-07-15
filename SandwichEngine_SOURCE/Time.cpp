@@ -1,4 +1,4 @@
-#include "SandwichTime.h"
+#include "Time.h"
 
 namespace Sandwich
 {

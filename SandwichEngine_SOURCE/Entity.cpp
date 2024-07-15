@@ -1,4 +1,4 @@
-#include "SandwichEntity.h"
+#include "Entity.h"
 
 namespace Sandwich
 {

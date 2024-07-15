@@ -2,6 +2,7 @@
 #include "../SandwichEngine_SOURCE/SceneManager.h"
 
 #include "PlayScene.h"
+#include "TitleScene.h"
 
 //#ifdef _DEBUG
 //#pragma comment(lib, "..\\x64\\Debug\\SandwichEngine_Window.lib")
@@ -14,6 +15,7 @@ namespace Sandwich
 {
 	void LoadScenes()
 	{
+		SceneManager::CreateScene<TitleScene>(L"TitleScene");
 		SceneManager::CreateScene<PlayScene>(L"PlayScene");
 
 		SceneManager::LoadScene(L"PlayScene");

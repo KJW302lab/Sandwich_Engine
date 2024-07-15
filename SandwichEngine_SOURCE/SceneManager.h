@@ -21,12 +21,17 @@ namespace Sandwich
 
 		static Scene* LoadScene(const std::wstring& name)
 		{
+			if (mActiveScene)
+				mActiveScene->OnExit();
+
 			std::map<std::wstring, Scene*>::iterator iter = mScenes.find(name);
 
 			if (iter == mScenes.end())
 				return nullptr;
 
 			mActiveScene = iter->second;
+
+			mActiveScene->OnEnter();
 
 			return mActiveScene;
 		}
@@ -37,7 +42,6 @@ namespace Sandwich
 		static void Render(HDC hdc);
 
 	private:
-		//static std::vector<Scene*> mScenes;
 		static std::map<std::wstring, Scene*> mScenes;
 		static Scene* mActiveScene;
 	};

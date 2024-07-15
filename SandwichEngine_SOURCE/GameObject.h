@@ -20,6 +20,7 @@ namespace Sandwich
 		{
 			T* comp = new T();
 			comp->SetOwner(this);
+			comp->Initialize();
 			mComponents.push_back(comp);
 
 			return comp;
